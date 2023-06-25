@@ -45,7 +45,7 @@
     color: white;
 }
 .d_key11{
-    width: 82px;
+    width: 155px;
     height: 52px;
     color: white;
 }
@@ -60,7 +60,17 @@
     color: white;
 }
 .d_key4{
-    width: 90px;
+    width: 120px;
+    height: 52px;
+    color: white;
+}
+.d_key5{
+    width: 60px;
+    height: 52px;
+    color: white;
+}
+.d_key6{
+    width: 419px;
     height: 52px;
     color: white;
 }
