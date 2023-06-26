@@ -7,20 +7,20 @@
     border: 2px solid black;
 }
 .d_cont{
-    height: 750px;
+    /* height: 750px; */
 }
 .d_mysection{
     transform: scale(0.8,0.8);
     border:10px solid #0DCAF0 !important;
 }
 .d_h32{
-    height: 220px;
+    /* height: 220px; */
 }
 .d_h33{
     height: 240px;
 }
 .d_h33_c{
-    background-image: url("../img/hand1.png");
+    /* background-image: url("../img/hand1.png"); */
     background-repeat:no-repeat;
     background-size: contain;
     background-position: center bottom ;
@@ -30,12 +30,17 @@
     height: 50px;
 }
 .d_key{
-    width: 47px;
+    width: 49px;
     height: 52px;
     color: white;
 }
 .d_key1{
-    width: 129px;
+    width: 100px;
+    height: 52px;
+    color: white;
+}
+.d_key01{
+    width: 61px;
     height: 52px;
     color: white;
 }
@@ -45,22 +50,22 @@
     color: white;
 }
 .d_key11{
-    width: 155px;
+    width: 132.3px;
     height: 52px;
     color: white;
 }
 .d_key2{
-    width: 60px;
+    width: 89px;
     height: 52px;
     color: white;
 }
 .d_key3{
-    width: 85px;
+    width: 106px;
     height: 52px;
     color: white;
 }
 .d_key4{
-    width: 120px;
+    width: 127px;
     height: 52px;
     color: white;
 }
@@ -70,7 +75,7 @@
     color: white;
 }
 .d_key6{
-    width: 419px;
+    width: 348px;
     height: 52px;
     color: white;
 }
@@ -82,4 +87,18 @@
 .d_keybl:hover{
     background-color: #B1BDFE;
     color: wheat;
+}
+.d_keyu, .d_keyd{
+    width: 49px;
+    height: 25px;
+    color: white;
+}
+.d_circle{
+    width: 25px;
+    height: 25px;
+}
+.d_blue{
+    left: 213px;
+    top:83px;
+    z-index:1001;
 }

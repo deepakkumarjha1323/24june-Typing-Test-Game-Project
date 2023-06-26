@@ -5,111 +5,148 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Js Typing Game</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body>
+    <body class="overflow-hidden">
+         <!-- Modal -->
+        <div class="modal fade" id="regitrationModel"  tabindex="-1" aria-labelledby="regitrationModelLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-center" id="regitrationModelLabel">Register Yorself</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="first_name" class="form-label">First Name</label>
+                            <input name="first_name" type="text" class="form-control" id="first_name" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="last_name" class="form-label">Last Name</label>
+                            <input name="last_name" type="text" class="form-control" id="last_name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveRegistrationData()">Save</button>
+                </div>
+            </div>
+        </div>
+        </div>
         <div class="d_cont container">
             <section class="d_mysection overflow-hidden h-100 border border-info-subtle border-5 rounded-5" >
                 <div class="h-100 row m-0">
                     <div class=" h-100 col-9" style="background:#efffd7">
-                        <div class=" display-6 d_h32 overflow-hidden p-1">asdf ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj asdfg ;lkjh asdfg ;lkjh</div>
+                        <div class=" display-6 d_h32 overflow-hidden p-1 pt-3 fw-medium text-left"><span class="text-primary">asdf</span> ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj asdfg ;lkjh asdfg ;lkjh asdf ;lkj </div>
                         <div class="d_keybord d_h33 p-0 mt-3">
                             <div>
-                                <button class="btn d_key d_keybl p-0">` <br>~</button>
-                                <button class="btn d_key d_keybl p-0">! <br>1</button>
-                                <button class="btn d_key d_keybl p-0">@ <br>2</button>
-                                <button class="btn d_key d_keybl p-0"># <br>3</button>
-                                <button class="btn d_key d_keybl p-0">$ <br>4</button>
-                                <button class="btn d_key d_keybl p-0">% <br>5</button>
-                                <button class="btn d_key d_keybl p-0">^ <br>6</button>
-                                <button class="btn d_key d_keybl p-0">& <br>7</button>
-                                <button class="btn d_key d_keybl p-0">* <br>8</button>
-                                <button class="btn d_key d_keybl p-0">( <br>9</button>
-                                <button class="btn d_key d_keybl p-0">) <br>0</button>
-                                <button class="btn d_key d_keybl p-0">_ <br>-</button>
-                                <button class="btn d_key d_keybl p-0">+ <br>=</button>
-                                <button class="btn d_key1 d_keybl p-0">Backspace</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">` <br>~</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">! <br>1</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">@ <br>2</button>
+                                <button class="btn d_key d_keybl p-0 pe-3"># <br>3</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">$ <br>4</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">% <br>5</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">^ <br>6</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">& <br>7</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">* <br>8</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">( <br>9</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">) <br>0</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">_ <br>-</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">+ <br>=</button>
+                                <button class="btn d_key1 d_keybl p-0"><i class="fa-solid fa-left-long"></i> Backspace</button>
                             </div>
                             <div class="mt-1">
-                                <button class="btn d_key2 d_keybl p-0">Tab</button>
-                                <button class="btn d_key d_keybl p-0">Q</button>
-                                <button class="btn d_key d_keybl p-0">W</button>
-                                <button class="btn d_key d_keybl p-0">E</button>
-                                <button class="btn d_key d_keybl p-0">R</button>
-                                <button class="btn d_key d_keybl p-0">T</button>
-                                <button class="btn d_key d_keybl p-0">Y</button>
-                                <button class="btn d_key d_keybl p-0">U</button>
-                                <button class="btn d_key d_keybl p-0">I</button>
-                                <button class="btn d_key d_keybl p-0">O</button>
-                                <button class="btn d_key d_keybl p-0">P</button>
-                                <button class="btn d_key d_keybl p-0"> { <br> [ </button>
-                                <button class="btn d_key d_keybl p-0">}<br>]</button>
-                                <button class="btn d_key12 d_keybl p-0">Enter</button>
+                                <button class="btn d_key2 d_keybl p-0">Tab <i class="fa-solid fa-right-left"></i></button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">Q</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">W</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">E</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">R</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">T</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">Y</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">U</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">I</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">O</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">P</button>
+                                <button class="btn d_key d_keybl p-0 pe-3"> { <br> [ </button>
+                                <button class="btn d_key d_keybl p-0 pe-3">}<br>]</button>
+                                <button class="btn d_key01 d_keybl p-0 pe-3">|<br>\</button>
+                                <!-- <button class="btn d_key12 d_keybl p-0">Enter</button> -->
                             </div>
                             <div class="mt-1">
-                                <button class="btn d_key3 d_keybl p-0">Caps Lock</button>
-                                <button class="btn d_key d_keybl p-0">A</button>
-                                <button class="btn d_key d_keybl p-0">S</button>
-                                <button class="btn d_key d_keybl p-0">D</button>
-                                <button class="btn d_key d_keybl p-0">F</button>
-                                <button class="btn d_key d_keybl p-0">G</button>
-                                <button class="btn d_key d_keybl p-0">H</button>
-                                <button class="btn d_key d_keybl p-0">J</button>
-                                <button class="btn d_key d_keybl p-0">K</button>
-                                <button class="btn d_key d_keybl p-0">L</button>
-                                <button class="btn d_key d_keybl p-0">: <br> ;</button>
-                                <button class="btn d_key d_keybl p-0">"<br>'</button>
-                                <button class="btn d_key d_keybl p-0">|<br>\</button>
-                                <!-- <button class="btn d_key1 d_keybl p-0">Enter</button> -->
+                                <button class="btn d_key3 d_keybl p-0">Caps Lock <i class="fa-brands fa-angular"></i></button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">A</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">S</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">D</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">F</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">G</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">H</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">J</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">K</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">L</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">: <br> ;</button>
+                                <button class="btn d_key d_keybl p-0 pe-3">"<br>'</button>
+                                <button class="btn d_key1 d_keybl p-0 pe-4"><i class="fa-solid fa-arrow-left-long"></i> Enter</button>
                             </div>
                             <div class="mt-1">
-                                <button class="btn d_key4 d_keybl p-0">Shift</button>
-                                <button class="btn d_key d_keybl p-0">Z</button>
-                                <button class="btn d_key d_keybl p-0">X</button>
-                                <button class="btn d_key d_keybl p-0">C</button>
-                                <button class="btn d_key d_keybl p-0">V</button>
-                                <button class="btn d_key d_keybl p-0">B</button>
-                                <button class="btn d_key d_keybl p-0">N</button>
-                                <button class="btn d_key d_keybl p-0">M</button>
-                                <button class="btn d_key d_keybl p-0">< <br> ,</button>
-                                <button class="btn d_key d_keybl p-0">> <br> .</button>
-                                <button class="btn d_key d_keybl p-0">? <br> /</button>
-                                <button class="btn d_key11 d_keybl p-0">Shift</button>
+                                <button class="btn d_key4 d_keybl p-0 pe-5"><i class="fa-solid fa-up-long"></i> Shift</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">Z</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">X</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">C</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">V</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">B</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">N</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 pb-3 fw-medium">M</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 fw-medium">< <br> ,</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 fw-medium">> <br> .</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 fw-medium">? <br> /</button>
+                                <button class="btn d_key11 d_keybl p-0 pe-5"><i class="fa-solid fa-up-long"></i> Shift</button>
                             </div>
                             <div class="mt-1">
-                                <button class="btn d_key5 d_keybl p-0">Ctrl</button>
-                                <button class="btn d_key d_keybl p-0">Win</button>
-                                <button class="btn d_key d_keybl p-0">Alt</button>
+                                <button class="btn d_key d_keybl p-0 pe-3 fw-medium text-dark">Fn</button>
+                                <button class="btn d_key5 d_keybl p-0 pe-3 fw-medium">Ctrl</button>
+                                <button class="btn d_key d_keybl p-0 pt-1"><i class="fa-brands fa-windows border border-2 p-1 rounded-5"></i></button>
+                                <button class="btn d_key d_keybl p-0 pe-2 fw-medium">Alt</button>
                                 <button class="btn d_key6 d_keybl p-0">Space</button>
-                                <button class="btn d_key d_keybl p-0">Alt</button>
-                                <button class="btn d_key d_keybl p-0">Win</button>
-                                <button class="btn d_key d_keybl p-0">Pnt</button>
-                                <button class="btn d_key d_keybl p-0">Ctrl</button>
-                                <!-- <button class="btn d_key d_keybl p-0">K</button>
-                                <button class="btn d_key d_keybl p-0">L</button>
-                                <button class="btn d_key d_keybl p-0">: <br> ;</button>
-                                <button class="btn d_key d_keybl p-0">"<br>'</button>
-                                <button class="btn d_key d_keybl p-0">|<br>\</button>
-                                <button class="btn d_key11 d_keybl p-0">Shift</button> -->
+                                <button class="btn d_key d_keybl p-0 pe-2 fw-medium">Alt</button>
+                                <button class="btn d_key d_keybl p-0 pt-1"><i class="fa-brands fa-windows border border-2 p-1 rounded-5"></i></button>
+                                <button class="btn d_key d_keybl p-0"><i class="fa-solid fa-clipboard"></i></button>
+                                <button class="btn d_key5 d_keybl p-0 pe-3 fw-medium">Ctrl</button>
                             </div>
                         </div>
-                        <div class=" d_hand d_h33 d_h33_c mt-5"></div>
-                    </div>
-                    <div class=" h-100 col-3"  style="background:#D2F59F">
-                        <h2 class="border-bottom border-5 mt-5 " style="border-bottom-color:#efffd7 !important">Time</h2>
-                        <h1><strong>03:00</strong></h1>
-                        
-                        <div class="d-grid gap-2">
-                            <button class="fs-2 text-dark fw-bold btn btn-outline-success">Start</button>
+                        <div class=" d_hand d_h33 d_h33_c mt-5 text-center position-relative">
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 243px;top:39px;"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 278px;top:28px;"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 310px;top:39px;"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 351px;top:139px;"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 405px;top:140px;"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 460px;top:36px;"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 500px;top:22px;"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 535px;top:38px;"></div>
+                            <div class="rounded-circle bg-danger d_circle position-absolute d_blue" style="left: 575px;top:86px;"></div>
+                            <img class="img-fluid w-50" src="./img/hand1.png" alt="pic">
                         </div>
-                        
+                    </div>
+                    <div class=" h-100 col-3"  style="background:#D2F59F; height: 710px !important;">
+                        <div class="position-relative">
+                            <p class="mt-5 m-0 d_wc fw-bold"></p>
+                            <h4 class="border-bottom border-5 " style="border-bottom-color:#efffd7 !important">Time</h4>
+                            <h1><strong>03:00</strong> <i class="fa-solid fa-stopwatch"></i></h1>
+                            <div class="position-absolute"  style="background:#D2F59F; bottom: 0px; top: 510px; right: 10px;">
+                                <button class="fs-5 w-100 text-dark fw-bold btn btn-outline-success my-1">Start</button>
+                                <button class="btn btn-outline-success w-100 fw-semibold my-1 bg-light text-dark">Next</button>
+                                <button class="btn btn-outline-success w-100 fw-semibold my-1 bg-light text-dark">Previous</button>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </section>
         </div>
-       
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>
