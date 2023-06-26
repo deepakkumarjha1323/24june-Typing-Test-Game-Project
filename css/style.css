@@ -19,8 +19,13 @@
 .d_h33{
     height: 240px;
 }
+.d_active{
+    transform: translate(2px,2px);
+    box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.8) !important;
+}
 .d_h33_c{
-    /* background-image: url("../img/hand1.png"); */
+    background-image: url("../img/hand1.png");
+    margin-left: 20px;
     background-repeat:no-repeat;
     background-size: contain;
     background-position: center bottom ;
@@ -98,7 +103,7 @@
     height: 25px;
 }
 .d_blue{
-    left: 213px;
-    top:83px;
+    left: 56px;
+    top:85px;
     z-index:1001;
 }
