@@ -3,22 +3,12 @@
     padding: 0px;
     box-sizing: border-box;
 }
-.d_tbdr{
-    border: 2px solid black;
-}
-.d_cont{
-    /* height: 750px; */
-}
+.d_tbdr{border: 2px solid black;}
 .d_mysection{
     transform: scale(0.8,0.8);
     border:10px solid #0DCAF0 !important;
 }
-.d_h32{
-    /* height: 220px; */
-}
-.d_h33{
-    height: 240px;
-}
+.d_h33{height: 240px;}
 .d_active{
     transform: translate(2px,2px);
     box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.8) !important;
