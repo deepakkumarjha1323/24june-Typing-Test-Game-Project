@@ -10,7 +10,8 @@
 }
 .d_h33{height: 240px;}
 .d_active{
-    transform: translate(2px,2px);
+    background-color: #c6c7c8;
+    transform: translate(0.6px,1px);
     box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.8) !important;
 }
 .d_h33_c{
@@ -91,9 +92,11 @@
 .d_circle{
     width: 25px;
     height: 25px;
+    display: none;
 }
 .d_blue{
     left: 56px;
     top:85px;
     z-index:1001;
+    
 }
